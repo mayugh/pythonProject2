@@ -17,13 +17,6 @@ app = Flask(__name__)
 initialise_routes(app)
 
 
-
-
-
-
-
-
-
 if __name__ == "__main__":
     #  Execute if running as a program
     app.run(debug=True)
