@@ -6,7 +6,7 @@
 Docstring:read by the help
 """
 
-@app.route('/')  # @ is a decorator
+#  @app.route('/')  # @ is a decorator
 def index():
     return "Hello World"
 
