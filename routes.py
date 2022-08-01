@@ -19,13 +19,16 @@ def initialise_routes(app):
 
 
 def list_routes(app):
+    routes = []
     for route in app.url_map.iter_rules():
-
+        routes.append({'Route':str(route),
+                        'Endpoint' : route.endpoint,
+                        'Methods': list(route.methods)
+        })
 
         # print(route)
         # print(route.endpoint)
         # print(route.methods)
-    return "Routes Info"
+    # return "Routes Info"
+    return jsonify({"Routes": routes, "Total": len(routes)})  # curly braces indicate a dictionary
 
-
-def
